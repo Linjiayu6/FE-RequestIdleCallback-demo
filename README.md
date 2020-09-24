@@ -1,6 +1,6 @@
 # RequestIdleCallback 实验
 
-**Live: https://linjiayu6.github.io/FE-requestIdleCallback-demo/**
+**DEMO: https://linjiayu6.github.io/FE-RequestIdleCallback-demo/**
 
 ```
 前言: 
