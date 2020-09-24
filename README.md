@@ -85,8 +85,7 @@ window.requestIdleCallback(cb)
 疑问:
 - **React 具体怎么做到的任务调度?**
 
-## 4. 性能截图
-丢帧情况
+## 4. 性能 (丢帧情况)
 ![同步](https://user-images.githubusercontent.com/13708045/94146066-fdd6e780-fea5-11ea-8f1e-54d378c49f74.jpg)
 ![低优空闲处理](https://user-images.githubusercontent.com/13708045/94146071-ffa0ab00-fea5-11ea-80ab-3627e026e241.jpg)
 
