@@ -1,6 +1,13 @@
 # RequestIdleCallback 实验
 
-> 前言: React 16 实现了基于Fiber的调度算法，但是和 requestIdleCallback 的实现大同小异。为什么React要自己实现一套调度算法呢? requestIdleCallback 兼容性并不是很好, React实现了自己的一套 任务调度。我们先来实验requestIdleCallback对性能 和 用户体验的 影响。
+**Live: https://linjiayu6.github.io/FE-requestIdleCallback-demo/**
+
+```
+前言: 
+- React 16 实现了基于Fiber的调度算法, 和requestIdleCallback 的实现大同小异。
+- 为什么 React要自己实现一套调度能力呢? 该API兼容性并不好。
+- 这里我们先来实验 requestIdleCallback 对性能 和 用户体验的 影响。
+```
 
 <hr/>
 
@@ -69,6 +76,11 @@ function cb(deadline) {
 window.requestIdleCallback(cb)
 ```
 
-## 3. DEMO
+## 3. Next
+感想:
+- window.requestIdleCallback 虽然还在实验阶段, 无法投入到production。
+- 但作为低优的任务调度能力，对用户体验的提升有很大帮助。
+- 未来可继续跟进该实验成果。
 
-Live: https://linjiayu6.github.io/FE-requestIdleCallback-demo/
+疑问:
+- **React 具体怎么做到的任务调度?**
