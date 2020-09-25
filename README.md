@@ -91,7 +91,17 @@ window.requestIdleCallback(cb)
 - **React 具体怎么做到的任务调度?**
 
 ## 4. 性能 (丢帧情况)
+>  https://medium.com/@paul_irish/requestanimationframe-scheduling-for-nerds-9c57f7438ef4
+### 4.1 同步
+- 从图上可以清晰看到点击按钮A，B,  C  响应如图。
+- 在点击按钮A后，同步处理A事件，等到A处理完后，响应B事件 .....
+- 但能看到此时lottie动画，丢帧严重，用户看到的是动画卡顿。
 ![同步](https://user-images.githubusercontent.com/13708045/94146066-fdd6e780-fea5-11ea-8f1e-54d378c49f74.jpg)
+### 4.2 requestIdleCallback 低优处理策略
+- 点击按钮A, B, C 后，并未同步处理按钮回调事情。
+- 按照 a frame 生命周期来说，处理完动画后，才会去根据浏览器空闲情况，来执行分片的事件。
+- 用户看到的动画不会卡顿。
+- 因为处理事件放到requestIdleCallback，默认为优先级低，并分片处理，故处理时长会比同步长很多。
 ![低优空闲处理](https://user-images.githubusercontent.com/13708045/94146071-ffa0ab00-fea5-11ea-80ab-3627e026e241.jpg)
 
 ## 5. 问题
