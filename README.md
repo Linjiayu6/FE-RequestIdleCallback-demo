@@ -110,3 +110,6 @@ window.requestIdleCallback(cb)
 - **requestAnimationFrame 是在 layout 和 paint 之前，因此更适合变更DOM操作**。
 - 因此React内部对调度策略的实现也是基于requestAnimationFrame的。
 
+## 6. R
+- https://que01.top/2019/08/28/v16-Scheduling-in-React/
+- https://zhuanlan.zhihu.com/p/60307571
