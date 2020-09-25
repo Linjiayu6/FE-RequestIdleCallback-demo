@@ -98,4 +98,5 @@ window.requestIdleCallback(cb)
 - requestIdleCallback 是利用帧之间空闲时间来执行JS.
 - 😈 **requestIdleCallback 是在 layout 和 paint 之后, 意味着requestIdleCallback 是可以js计算并改变DOM的，也就是说会 触发重新 layout 和 paint**
 - **requestAnimationFrame 是在 layout 和 paint 之前，因此更适合变更DOM操作**。
+- 因此React内部对调度策略的实现也是基于requestAnimationFrame的。
 
