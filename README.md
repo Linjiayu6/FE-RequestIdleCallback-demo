@@ -94,3 +94,8 @@ window.requestIdleCallback(cb)
 ![同步](https://user-images.githubusercontent.com/13708045/94146066-fdd6e780-fea5-11ea-8f1e-54d378c49f74.jpg)
 ![低优空闲处理](https://user-images.githubusercontent.com/13708045/94146071-ffa0ab00-fea5-11ea-80ab-3627e026e241.jpg)
 
+## 5. 问题
+- requestIdleCallback 是利用帧之间空闲时间来执行JS.
+- 😈 **requestIdleCallback 是在 layout 和 paint 之后, 意味着requestIdleCallback 是可以js计算并改变DOM的，也就是说会 触发重新 layout 和 paint**
+- **requestAnimationFrame 是在 layout 和 paint 之前，因此更适合变更DOM操作**。
+
